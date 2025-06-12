@@ -1,0 +1,53 @@
+nav {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .acc {
+      font-size: 25px;
+    }
+    .popup {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: #111111dd;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      z-index: 999;
+      text-align: center;
+      width: 0;
+      max-width: 100%;
+    }
+  
+    .popup span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 36px;
+      cursor: pointer;
+      color: #fff;
+    }
+  
+    .popup a {
+      display: block;
+      margin: 30px 0;
+      font-size: 15px;
+      color: #818181;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+  
+    .popup a:hover {
+      color: #f1f1f1;
+    }
+  }
+  

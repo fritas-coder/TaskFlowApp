@@ -17,6 +17,11 @@ const registerUser = async (req, res) => {
   //3- hash password
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
+
+  if (password.length < 6) {
+    return res.status(400).json({ message: "Password must be at least 6 characters" });
+  }
+  
   //4- create user
   const user = await User.create({
     name,
@@ -30,6 +35,7 @@ const registerUser = async (req, res) => {
   //6- return success response
   res.status(201).json({
     _id: user._id,
+    name: user.name,
     email: user.email,
     token,
   });
@@ -59,6 +65,7 @@ const loginUser = async (req, res) => {
   //5- return success response
   res.status(201).json({
     _id: user._id,
+    name: user.name,
     email: user.email,
     token,
   });
