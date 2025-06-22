@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { reset, login } from "../features/auths/authSlice";
+import Spinner from "../components/Spinner";
 import "../styles/logreg.css";
 
 export default function Login() {
@@ -37,11 +38,14 @@ export default function Login() {
     e.preventDefault();
     dispatch(login({ email, password }));
   };
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <section className="main-container">
       <section className="form-cont">
         <section className="heading">
-          <h1>Welcome Back</h1>
+          <h1>Nice Seeing You Again</h1>
           <p>Log in to your account</p>
         </section>
         <section className="form">
@@ -69,7 +73,9 @@ export default function Login() {
             <div className="form-group">
               <button type="submit">Log In</button>
             </div>
-            <p>Don't have an account? <a href="/register">sign up now</a></p> 
+            <p>
+              Don't have an account? <a href="/register">sign up now</a>
+            </p>
           </form>
         </section>
       </section>

@@ -7,17 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.App{
-  background-color: #f0f2f5;
-}
+
 .app-pages{
-  padding-inline: 150px;
+  padding-inline: 300px;
 }
 
 
 
 @media (max-width: 768px) {
   .app-pages{
-    padding-inline: 25px;
+    padding-inline: 30px;
   }
 }

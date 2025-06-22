@@ -1,4 +1,7 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {
+  createAsyncThunk,
+  createSlice,
+} from "@reduxjs/toolkit";
 import authService from "./authService";
 
 //get user from localStorage
@@ -37,6 +40,12 @@ export const login = createAsyncThunk(
   }
 );
 
+//logOut 
+export const logOut = createAsyncThunk(
+  "auth/logout",
+  async () => await authService.logOut()
+);
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -47,7 +56,7 @@ const authSlice = createSlice({
       state.isSuccess = false;
       state.message = "";
     },
-    logout: (state) => {
+    logOut: (state) => {
       localStorage.removeItem("user");
       state.user = null;
     },
@@ -81,8 +90,17 @@ const authSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         state.user = null;
+      })
+      .addCase(logOut.pending, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.message = action.payload;
+        state.user = null;
+      })
+      .addCase(logOut.fulfilled, (state) => {
+        state.user = null;
       });
   },
 });
-export const { reset, logout } = authSlice.actions;
+export const { reset} = authSlice.actions;
 export default authSlice.reducer;

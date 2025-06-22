@@ -1,0 +1,16 @@
+.dashboard-form{
+    align-items: center;
+    text-align: center;
+    h2{
+        color: rgba(0, 0, 0, 0.688);
+    }
+}
+.dash{
+    margin-bottom: 50px;
+}
+@media (max-width: 768px){
+    .dashboard-form{
+        width: 100%;
+        height: auto;
+    }
+}

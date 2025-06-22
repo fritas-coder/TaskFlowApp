@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { register, reset } from "../features/auths/authSlice";
+import Spinner from "../components/Spinner";
 import "../styles/logreg.css";
 
 export default function Register() {
@@ -46,6 +47,9 @@ export default function Register() {
       dispatch(register(userData));
     }
   };
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <section className="main-container">
       <section className="form-cont" style={{ height: 500 }}>

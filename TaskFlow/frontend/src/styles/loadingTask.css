@@ -1,0 +1,21 @@
+.dot {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
+  animation: dotsAnim 1s steps(3, end) infinite;
+  width: 0ch;
+  overflow: hidden;
+
+}
+@keyframes dotsAnim{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 1ch;
+    }
+    100%{
+        width: 3ch;
+    }
+}

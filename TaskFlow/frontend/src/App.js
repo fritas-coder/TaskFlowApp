@@ -3,10 +3,11 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
 
       <div className="app-pages">
@@ -16,7 +17,9 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
-    </div>
+      <Footer/>
+
+    </>
   );
 }
 

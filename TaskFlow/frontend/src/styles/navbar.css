@@ -1,8 +1,7 @@
 nav {
-    justify-content: space-between;
+    justify-content: space-around;
     display: flex;
     align-items: center;
-    padding: 0 25px;
     background-color: #222;
     color: white;
     position: relative;
@@ -39,7 +38,7 @@ nav {
   
     .popup a {
       display: block;
-      margin: 30px 0;
+      padding: 40px 0;
       font-size: 15px;
       color: #818181;
       text-decoration: none;
@@ -48,6 +47,7 @@ nav {
   
     .popup a:hover {
       color: #f1f1f1;
+      background-color: #0d040450;
     }
   }
   

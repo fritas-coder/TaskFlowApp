@@ -1,0 +1,16 @@
+footer {
+  height: 85px;
+  color: black;
+  align-items: center;
+  font-size: 13px;
+  text-align: center;
+}
+footer p a {
+  font-weight: bold;
+  text-decoration: none;
+}
+footer .media a {
+  color: black;
+  padding: 0px 25px;
+  font-weight: bold;
+}
