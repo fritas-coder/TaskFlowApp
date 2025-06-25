@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <p>
         <p>© 2025 TaskFlow. All rights reserved.</p>
+        <p>
           Made by
           <a href="mailto:sodjifritas@gmail.com"> sodjifritas@gmail.com</a>
         </p>

@@ -1,5 +1,5 @@
 footer {
-  height: 85px;
+  height: 90px;
   color: black;
   align-items: center;
   font-size: 13px;
@@ -9,8 +9,11 @@ footer p a {
   font-weight: bold;
   text-decoration: none;
 }
+footer .media{
+  display: flex;
+  justify-content: space-around;
+}
 footer .media a {
   color: black;
-  padding: 0px 25px;
   font-weight: bold;
 }

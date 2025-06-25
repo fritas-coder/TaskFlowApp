@@ -8,14 +8,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.app-pages{
+.app-pages {
   padding-inline: 300px;
 }
 
-
-
 @media (max-width: 768px) {
-  .app-pages{
+  .app-pages {
     padding-inline: 30px;
+  }
+}
+@media (width: 820px) {
+  .app-pages {
+    padding-inline: 100px;
   }
 }
