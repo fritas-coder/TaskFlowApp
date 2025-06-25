@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://your-frontend-name.onrender.com",
+      "https://taskflow-v78x.onrender.com",
     ],
     credentials: true,
   })
