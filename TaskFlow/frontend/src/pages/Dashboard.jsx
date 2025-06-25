@@ -16,7 +16,7 @@ export default function Dashboard() {
         >
           Dashboard
         </h1>
-        <h2>Welcome Back {user && user.name}</h2>
+        <h2>Welcome {user && user.name}</h2>
         <h4>Start Creating Tasks</h4>
         <TaskForm />
       </div>
