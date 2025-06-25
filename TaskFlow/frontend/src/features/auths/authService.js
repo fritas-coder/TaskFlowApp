@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/users";
+const API_URL = "https://taskflow-backend-433p.onrender.com/api/users";
 
 //register
 const register = async (userData) => {
